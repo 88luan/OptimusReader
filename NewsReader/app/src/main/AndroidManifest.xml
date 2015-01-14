@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="optimus.newsreader.app" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="optimus.newsreader.app.loaderImage.LoaderApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_zing"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+ <!-- (rất quan trọng) Sử dụng thư viện download hình ảnh -->
+
+        <activity
+            android:name=".navigationDrawer.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="optimus.newsreader.app.activities.DetailActivity"
+            android:label="@string/title_activity_detail" >
+        </activity>
+    </application>
+
+</manifest>
